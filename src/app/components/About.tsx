@@ -4,15 +4,16 @@ import { FaLaptopCode, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
 
 export default function About() {
     return (
-        <section id='about' className="h-screen flex flex-col md:flex-row justify-center items-center text-center px-6 py-12 m-10 border border-gray-300 shadow-lg rounded-lg bg-gradient-to-br from-white via-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 dark:border-gray-700 dark:shadow-gray-800">    
+        <section id='about' className="min-h-[90vh] flex flex-col sm:flex-row justify-center items-center text-center sm:text-left px-4 sm:px-6 py-12 m-4 sm:m-10 border border-gray-300 shadow-lg rounded-lg bg-gradient-to-br from-white via-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 dark:border-gray-700 dark:shadow-gray-800 gap-6 sm:gap-8">    
+            
             <motion.div 
-                className="flex flex-col justify-center items-center md:items-start text-center md:text-left w-full md:w-[25%] border-b md:border-r border-gray-300 dark:border-gray-600 pb-8 md:pb-0"
+                className="w-full sm:w-[30%] flex flex-col justify-center items-center sm:items-start text-center sm:text-left border-b sm:border-r border-gray-300 dark:border-gray-600 pb-8 sm:pb-0 sm:pr-6"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
             >
                 <motion.h1
-                    className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-gray-200 to-gray-600 text-transparent bg-clip-text"
+                    className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-gray-200 to-gray-600 dark:text-transparent bg-clip-text"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
@@ -21,7 +22,7 @@ export default function About() {
                 </motion.h1>
 
                 <motion.ul 
-                    className="text-lg md:text-xl mt-4 p-4 flex flex-col justify-start items-start gap-4 text-gray-700 dark:text-gray-300"
+                    className="text-lg sm:text-xl mt-4 p-4 flex flex-col justify-start items-center sm:items-start gap-4 text-gray-700 dark:text-gray-300"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.5, duration: 0.8 }}
@@ -47,15 +48,15 @@ export default function About() {
                 </motion.ul>
             </motion.div>
 
-            {/* Right Section (Bio) */}
+            {/* Right Section: Bio */}
             <motion.div 
-                className="md:w-[75%] max-w-4xl mx-auto text-left"
+                className="w-full sm:w-[70%] max-w-4xl mx-auto text-center sm:text-left px-4 sm:px-0"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
             >
                 <motion.p 
-                    className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed"
+                    className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 leading-relaxed"
                 >
                     Hello! I&apos;m <span className="font-bold text-blue-500 dark:text-blue-400">Taj</span>,<br />
                     a <span className="font-semibold text-indigo-500 dark:text-indigo-400">self-taught Full Stack Developer</span> with over two years of experience building modern web applications. 

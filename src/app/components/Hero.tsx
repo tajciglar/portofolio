@@ -3,10 +3,10 @@ import { motion } from "framer-motion"
 
 function Hero() {
   return (
-    <section className="h-screen flex flex-col md:flex-row justify-center items-center text-center px-6 py-12 m-10 border border-gray-300 shadow-lg rounded-lg bg-gradient-to-br from-gray-200  via-gray-100 to-white dark:from-gray-800 dark:to-gray-900  dark:border-gray-700 dark:shadow-gray-800">
+    <section className="min-h-[90vh] flex flex-col sm:flex-row justify-center items-center text-center px-4 sm:px-6 py-12 m-4 sm:m-10 border border-gray-300 shadow-lg rounded-lg bg-gradient-to-br from-white via-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 dark:border-gray-700 dark:shadow-gray-800 gap-6 sm:gap-8">
       <div className="w-full max-w-7xl mx-auto border-l border-r border-b rounded-lg border-gray-200 p-5">
         <motion.h1
-          className="text-6xl md:text-7xl font-bold mb-4 leading-tight md:leading-snug"
+          className="text-5xl md:text-7xl font-bold mb-4 leading-tight md:leading-snug"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
