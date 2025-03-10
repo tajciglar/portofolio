@@ -35,7 +35,7 @@ const FlipCard = () => {
         onClick={() => setIsFlipped(!isFlipped)}
       >
         {/* Front Side */}
-        <div className="absolute w-full h-full bg-gradient-to-b from-gray-100 via-gray-00 to-gray-300 dark:from-slate-800 dark:via-slate-600 dark:to-slate-400 dark:bg-gray-800 text-gray-900 dark:text-white flex flex-col justify-center items-center rounded-xl border border-gray-300 dark:border-gray-600 p-6 overflow-auto" style={{ backfaceVisibility: "hidden" }}>
+        <div className="absolute w-full h-full bg-gradient-to-b from-gray-100 via-gray-00 to-gray-300 dark:from-slate-700 dark:to-slate-800 dark:bg-gray-800 text-gray-900 dark:text-white flex flex-col justify-center items-center rounded-xl border border-gray-300 dark:border-gray-600 p-6 overflow-auto" style={{ backfaceVisibility: "hidden" }}>
           <h1 className="text-xl font-semibold mb-4 text-center">Frontend</h1>
           <div className="w-full flex overflow-x-auto gap-5 md:grid md:grid-cols-2 lg:grid-cols-3">
             {frontend.map((tech) => (
@@ -49,7 +49,7 @@ const FlipCard = () => {
         </div>
 
         {/* Back Side */}
-        <div className="absolute w-full h-full bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 dark:from-slate-800 dark:via-slate-600 dark:to-slate-400 dark:bg-gray-800 text-gray-900 dark:text-white flex flex-col justify-center items-center rounded-xl border border-gray-300 dark:border-gray-600 p-6 overflow-auto" style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}>
+        <div className="absolute w-full h-full bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 dark:from-slate-800 dark:to-slate-700 dark:bg-gray-800 text-gray-900 dark:text-white flex flex-col justify-center items-center rounded-xl border border-gray-300 dark:border-gray-600 p-6 overflow-auto" style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}>
           <h1 className="text-xl font-semibold mb-4 text-center">Backend</h1>
           <div className="w-full flex overflow-x-auto gap-5 md:grid md:grid-cols-2 lg:grid-cols-3">
             {backend.map((tech) => (
