@@ -1,5 +1,6 @@
 'use client'
 import { useState } from "react";
+import ProjectSlider from "./ProjectSlider";
 
 export default function ProjectContainer() {
     const [project, setProject] = useState("Project 1");
@@ -10,7 +11,10 @@ export default function ProjectContainer() {
             description: "A social media application inspired by Facebook, featuring user profiles, posts, likes, and comments.",
             techStack: ["Vue.js", "TypeScript", "Node.js", "Prisma", "PostgreSQL", "Tailwind CSS"],
             github: "https://github.com/tajciglar/odin-book",
-            liveDemo: "Under development"
+            liveDemo: "Under development",
+            images: [
+               
+            ],
         },
         {
             title: "Messaging App",
@@ -24,7 +28,14 @@ export default function ProjectContainer() {
             description: "A RESTful API backend for a blogging platform, enabling content management and user interactions.",
             techStack: ["React.js", "Node.js", "Prisma", "PostgreSQL"],
             github: "https://github.com/tajciglar/blog-app",
-            liveDemo: "https://tajsblogapp.netlify.app/"
+            liveDemo: "https://tajsblogapp.netlify.app/",
+            images: [
+                "/blog-app/Blog-Login.png",
+                "/blog-app/Blog-Home.png",
+                "/blog-app/Blog-New-Post.png",
+                "/blog-app/Admin-View.png",
+                "/blog-app/Admin-Post-Page.png",
+            ],
         },
         {
             title: "Nail Salon App",
@@ -32,7 +43,7 @@ export default function ProjectContainer() {
             techStack: ["Next.js", "Express.js", "Prisma", "PostgreSQL", "Tailwind CSS"],
             github: "https://github.com/tajciglar/unique-beauty-corner",
             liveDemo: "Backend in progress"
-        }   
+        } 
     ];
 
     return (
@@ -59,6 +70,7 @@ export default function ProjectContainer() {
                 <p className="text-gray-600 mt-4">
                     {projects.find((p) => p.title === project)?.description}
                 </p>
+                <ProjectSlider images={projects.find((p) => p.title === project)?.images || []} />
             </div>
         </div>
     );
