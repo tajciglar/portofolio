@@ -22,14 +22,14 @@ export default function About() {
                 </motion.h1>
 
                 <motion.ul 
-                    className="text-lg sm:text-xl mt-4 p-4 flex flex-col justify-start items-center sm:items-start gap-4 text-gray-400 dark:text-gray-300"
+                    className="text-lg sm:text-2xl mt-4 p-4 flex flex-col justify-start items-center sm:items-start gap-4 text-gray-400 dark:text-gray-300"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.5, duration: 0.8 }}
                 >
                     <li className="flex items-center gap-2 group">
                         <FaLaptopCode className="text-gray-500 group-hover:text-gray-300 transition-colors" />
-                        <a href="#tech-stack" className="hover:underline">Tech Stack</a>
+                        <a href="#stack" className="hover:underline">Tech Stack</a>
                     </li>
                     <li className="flex items-center gap-2 group">
                         <FaProjectDiagram className="text-gray-500 group-hover:text-gray-300 transition-colors" />
@@ -42,7 +42,6 @@ export default function About() {
                 </motion.ul>
             </motion.div>
 
-            {/* Right Section: Bio */}
             <motion.div 
                 className="w-full sm:w-[70%] max-w-4xl mx-auto text-center sm:text-left px-4 sm:px-0"
                 initial={{ opacity: 0, x: 20 }}
@@ -50,9 +49,9 @@ export default function About() {
                 transition={{ delay: 0.5, duration: 0.8 }}
             >
                 <motion.p 
-                    className="text-lg sm:text-xl text-gray-400 dark:text-gray-300 leading-relaxed"
+                    className="text-xl sm:text-2xl text-gray-400 dark:text-gray-300 leading-relaxed"
                 >
-                    Hello! I’m <span className="font-bold text-gray-200">Taj</span>,<br />
+                    Hello! I’m <span className="font-bold text-gray-400">Taj</span>,<br />
                     a <span className="font-semibold">self-taught Full Stack Developer</span> with over two years of experience building modern web applications. 
                     My journey into tech started early with a <span className="font-semibold">high school diploma in computer technology</span>. 
                     Though I initially pursued a degree in <span className="font-semibold">physiotherapy</span> driven by my passion for sports, my love for technology never faded. 

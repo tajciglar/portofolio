@@ -25,9 +25,9 @@ const FlipCard = () => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div className="relative w-full flex justify-center items-center" style={{ perspective: "1000px" }}>
+    <div className="relative w-full flex justify-center items-center" >
       <motion.div
-        className="relative w-full max-w-4xl h-[60vh] md:h-[70vh] rounded-xl shadow-lg cursor-pointer"
+        className="relative w-full max-w-5xl h-[60vh] md:h-[70vh] rounded-xl shadow-lg cursor-pointer"
         initial={false}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.6 }}
@@ -41,8 +41,8 @@ const FlipCard = () => {
             {frontend.map((tech) => (
               <div key={tech.name} className="border border-gray-300 dark:border-gray-600 p-4 rounded-lg flex flex-col justify-center items-center min-w-[200px]">
                 <Image src={tech.src} alt={tech.name} width={60} height={60} className="hidden lg:block" />
-                <h2 className="font-semibold mt-2">{tech.name}</h2>
-                <p className="text-sm text-center">{tech.description}</p>
+                <h2 className="font-semibold mt-2 text-xl">{tech.name}</h2>
+                <p className="text-lg text-center">{tech.description}</p>
               </div>
             ))}
           </div>
@@ -55,8 +55,8 @@ const FlipCard = () => {
             {backend.map((tech) => (
               <div key={tech.name} className="border border-gray-300 dark:border-gray-600 p-4 rounded-lg flex flex-col justify-center items-center min-w-[200px]">
                 <Image src={tech.src} alt={tech.name} width={60} height={60} className="hidden lg:block" />
-                <h2 className="font-semibold mt-2">{tech.name}</h2>
-                <p className="text-sm text-center">{tech.description}</p>
+                <h2 className="text-xl font-semibold mt-2">{tech.name}</h2>
+                <p className="text-lg text-center">{tech.description}</p>
               </div>
             ))}
           </div>

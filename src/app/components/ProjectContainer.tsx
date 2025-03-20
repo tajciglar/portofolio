@@ -3,7 +3,7 @@ import { useState } from "react";
 import ProjectSlider from "./ProjectSlider";
 
 export default function ProjectContainer() {
-    const [project, setProject] = useState("Project 1");
+    
 
     const projects = [
         {
@@ -46,15 +46,17 @@ export default function ProjectContainer() {
         } 
     ];
 
+    const [project, setProject] = useState(projects[0].title);
+
     return (
-        <div className="grid grid-cols-3 h-screen border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg w-full ">
-            <div className="bg-gray-900 text-white rounded-md p-5">
+        <div className="grid grid-cols-3 h-screen border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg w-full">
+            <div className="bg-gray-900 text-white rounded-md p-5 w-2/3">
                 <ul className="space-y-2">
                     {projects.map((p) => (
                         <li key={p.title}>
                             <button
                                 onClick={() => setProject(p.title)}
-                                className={`w-full text-left px-3 py-2 rounded-md transition ${
+                                className={`w-full text-xl text-left px-3 py-2 rounded-md transition ${
                                     project === p.title ? "bg-blue-500" : "hover:bg-gray-700"
                                 }`}
                             >
@@ -67,7 +69,7 @@ export default function ProjectContainer() {
 
             <div className="col-span-2 flex flex-col items-center justify-center p-10">
                 <h1 className="text-3xl font-bold">{project}</h1>
-                <p className="text-gray-600 mt-4">
+                <p className="text-gray-600 mt-4 text-xl dark:text-gray-300 p-4 text-center">
                     {projects.find((p) => p.title === project)?.description}
                 </p>
                 <ProjectSlider images={projects.find((p) => p.title === project)?.images || []} />
