@@ -10,7 +10,9 @@ export default function ProjectContainer() {
             description: "A social media application inspired by Facebook, featuring user profiles, posts, likes, and comments.",
             techStack: ["Vue.js", "TypeScript", "Node.js", "Prisma", "PostgreSQL", "Tailwind CSS"],
             github: "https://github.com/tajciglar/odin-book",
-            images: [],
+            images: [
+                "/odin-book/OdinBook.png",
+            ],
         },
         {
             title: "Messaging App",
@@ -18,7 +20,9 @@ export default function ProjectContainer() {
             techStack: ["React.js", "TypeScript", "Node.js", "Prisma", "PostgreSQL", "Tailwind CSS"],
             github: "https://github.com/tajciglar/messaging-app",
             liveDemo: "https://tajs-messaging-app.netlify.app/",
-            images: [],
+            images: [
+                "/messaging-app/MessagingApp.png",
+            ],
         },
         {
             title: "Blog Application",
@@ -59,7 +63,7 @@ export default function ProjectContainer() {
                             <button
                                 onClick={() => setSelectedProject(p)}
                                 className={`w-full text-xl text-left px-3 py-2 rounded-md transition ${
-                                    selectedProject.title === p.title ? "bg-blue-500" : "hover:bg-gray-700"
+                                    selectedProject.title === p.title ? "bg-gray-400" : "hover:bg-gray-700"
                                 }`}
                             >
                                 {p.title}
@@ -78,23 +82,28 @@ export default function ProjectContainer() {
                 {selectedProject.image && selectedProject.image.length > 0 && (
                     <Image src={selectedProject.image[0]} alt={selectedProject.title} width={600} height={500} className="rounded-lg" onClick={() => openProject(selectedProject.liveDemo)}/>
                 )}
-                <div className="flex gap-4 mt-4 items-center">
-                    <FaGithub className="text-2xl" />
-                    {selectedProject.github && (
-                        <a href={selectedProject.github} target="_blank" rel="noreferrer" className="text-blue-500 hover:underline text-lg">
-                            View on GitHub
-                        </a>
-                    )}
-                </div>
                 <div className="flex gap-4 mt-4 items-center justify-center">
-                    <FaGlobe className="text-2xl" />
-                    {selectedProject.liveDemo && (
-                        <button
-                            onClick={() => openProject(selectedProject.liveDemo)}
-                            className="text-blue-500 hover:underline text-lg"
-                        >
-                            Live Demo
-                        </button>
+                    {selectedProject.liveDemo ? (
+                        <>
+                            <button
+                                onClick={() => openProject(selectedProject.github)}
+                                className="hover:underline text-lg lg:text-xl flex gap-4"
+                            >
+                                <FaGithub className="text-2xl" />
+                                View on GitHub
+                            </button>
+                            <button
+                                onClick={() => openProject(selectedProject.liveDemo)}
+                                className="hover:underline text-lg lg:text-xl flex gap-4"
+                            >
+                                <FaGlobe className="text-2xl" />
+                                Live Demo
+                            </button>
+                        </>
+                    ) : (
+                        <p>
+                            This project is still under development.
+                        </p>
                     )}
                 </div>
                 
