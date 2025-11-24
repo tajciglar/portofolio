@@ -7,13 +7,13 @@ export default function About() {
         <section id='about' className="min-h-[90vh] flex flex-col sm:flex-row justify-center items-center text-center sm:text-left px-4 sm:px-6 py-12 m-4 sm:m-10 border border-gray-300 shadow-lg rounded-lg bg-gradient-to-tl from-white via-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 dark:border-gray-700 dark:shadow-gray-800 gap-6 sm:gap-8">    
             
             <motion.div 
-                className="w-full sm:w-[30%] flex flex-col justify-center items-center sm:items-start text-center sm:text-left border-b rounded-sm sm:border-r border-gray-600 dark:border-gray-700 pb-8 sm:pb-0 sm:pr-6"
+                className="w-full sm:w-[30%] flex flex-col justify-center items-center sm:items-start text-center sm:text-left border-b rounded-sm sm:border-r border-gray-300 dark:border-gray-700 pb-8 sm:pb-0 sm:pr-6"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
             >
                 <motion.h1
-                    className="text-3xl md:text-6xl font-extrabold bg-gradient-to-l from-gray-200 to-gray-600  dark:text-transparent bg-clip-text p-2 sm:p-4 border-gray-300 dark:border-gray-600 justify-center"
+                    className="text-3xl md:text-6xl font-extrabold bg-gradient-to-l from-gray-500 to-gray-900 dark:from-gray-300 dark:to-gray-500 text-transparent bg-clip-text"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
