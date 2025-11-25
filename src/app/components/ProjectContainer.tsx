@@ -74,7 +74,6 @@ export default function ProjectContainer() {
                             >
                                 {p.title}
                             </button>
-                            {p.date}
                         </li>
                     ))}
                 </ul>
@@ -83,6 +82,9 @@ export default function ProjectContainer() {
             {/* Right Side: Project Details */}
             <div className="flex flex-col items-center justify-center p-10 max-w-3xl w-full ">
                 <h1 className="text-3xl font-bold">{selectedProject.title}</h1>
+                <p>
+                    {selectedProject.date}
+                </p>
                 <p className="text-gray-600 mt-4 text-xl dark:text-gray-300 p-4 text-center">
                     {selectedProject.description}
                 </p>
