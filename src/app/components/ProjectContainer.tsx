@@ -51,7 +51,7 @@ export default function ProjectContainer() {
 
     const [selectedProject, setSelectedProject] = useState(projects[0]);
 
-    const openProject = (demoUrl: string) => {
+    const openProject = (demoUrl: string | URL | undefined) => {
         if (demoUrl) {
             window.open(demoUrl, "_blank");
         } else {
